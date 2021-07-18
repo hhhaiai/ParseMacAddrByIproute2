@@ -1,9 +1,10 @@
 package com.github.qiang.iproute2.parsemac;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public native String parseMac();
 
     public void click(View view) {
-        parseMac();
+        String s = parseMac();
+        Log.i("Q_M", "MAC:" + s);
     }
 }
